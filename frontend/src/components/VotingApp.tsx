@@ -237,7 +237,7 @@ export default function VotingApp() {
             Add New Candidate
           </h2>
           <p className="text-gray-600 text-sm mb-4">Add a candidate to the voting ballot.</p>
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-black">
             <input
               type="text"
               value={newCandidateName}
