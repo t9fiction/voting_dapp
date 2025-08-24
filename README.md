@@ -52,7 +52,7 @@ npx hardhat node
 
 ### 2. Deploy Smart Contract
 ```bash
-npx hardhat run scripts/deploy.js --network localhost
+npx hardhat ignition deploy ./ignition/modules/Voting.ts --network localhost
 ```
 
 ### 3. Update Contract Address
