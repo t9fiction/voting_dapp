@@ -1,0 +1,35 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hardhat
+/hardhat/cache/
+/hardhat/artifacts/
+/hardhat/ignition/deployments/
+
+# Backend
+/backend/dist/
+
+# Frontend (Next.js)
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+
+# Editor and OS files
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

@@ -1,0 +1,13 @@
+curl -X POST http://localhost:3000/candidates -H "Content-Type: application/json" -d '{"name":"Alice","ownerAddress":"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"}'
+curl -X POST http://localhost:3000/candidates -H "Content-Type: application/json" -d '{"name":"Bob","ownerAddress":"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"}'
+curl -X POST http://localhost:3000/candidates -H "Content-Type: application/json" -d '{"name":"Charlie","ownerAddress":"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"}'
+
+curl http://localhost:3000/candidates
+
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0x70997970C51812dc3A010C7d01b50e0d17dc79C8","candidateIndex":0}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC","candidateIndex":1}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0x90F79bf6EB2c4f870365E785982E1f101E93b906","candidateIndex":1}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0x90F79bf6EB2c4f870365E785982E1f101E93b906","candidateIndex":0}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0xBcd4042DE499D14e55001CcbB24a551F3b954096","candidateIndex":2}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0x71bE63f3384f5fb98995898A86B02Fb2426c5788","candidateIndex":2}'
+curl -X POST http://localhost:3000/vote -H "Content-Type: application/json" -d '{"voterAddress":"0xcd3B766CCDd6AE721141F452C550Ca635964ce71","candidateIndex":2}'
