@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f9fafb; /* gray-50 */
+  --foreground: #111827; /* gray-900 */
+  --card: #ffffff;
+  --primary: #2563eb; /* blue-600 */
+  --primary-foreground: #ffffff;
+  --secondary: #059669; /* emerald-600 */
+  --secondary-foreground: #ffffff;
+  --muted: #f3f4f6; /* gray-100 */
+  --muted-foreground: #6b7280; /* gray-500 */
+  --accent: #7c3aed; /* purple-600 */
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626; /* red-600 */
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb; /* gray-200 */
+  --input: #ffffff;
+  --ring: #2563eb; /* blue-600 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #111827; /* gray-900 */
+    --foreground: #f9fafb; /* gray-50 */
+    --card: #1f2937; /* gray-800 */
+    --primary: #3b82f6; /* blue-500 */
+    --secondary: #10b981; /* emerald-500 */
+    --muted: #374151; /* gray-700 */
+    --muted-foreground: #9ca3af; /* gray-400 */
+    --accent: #8b5cf6; /* purple-500 */
+    --destructive: #ef4444; /* red-500 */
+    --border: #374151; /* gray-700 */
+    --input: #1f2937; /* gray-800 */
+    --ring: #3b82f6; /* blue-500 */
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-[--background] text-[--foreground] font-sans;
+  line-height: 1.6;
+}
+
+button, input, select, textarea {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+* {
+  border-color: var(--border);
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
 }
